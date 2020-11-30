@@ -1,0 +1,194 @@
+===============================
+BrainBox Essays Blocks
+===============================
+
+Home Page
+===============================
+1. Jumbotron 
+2. Landing Form Block ? Optional or folded to Jumbotron
+3. Selling Points
+4. Offerings Summary
+5. Acheivements Summary
+6. Testimonials
+7. Recent Posts
+8. Subscription Form
+9. Image Box
+
+About Page
+===============================
+1. Page Heading
+2. Stats Bar
+3. Image Slider
+4. Quote Text 
+
+Services Page
+===============================
+1. Page Heading
+2. Post content
+
+Pricing Page
+===============================
+1. Page Heading
+1. Pricing Widget Block
+
+Blog Page
+===============================
+1. Page Heading
+2. Post Index
+
+FAQ Page
+===============================
+1. Page Heading
+2. FAQ Block
+
+Contact Page
+===============================
+1. Page Heading
+2. Form Block
+
+Other Blocks
+==============
+1. Page Banner
+1. Page Breadcrumbs
+
+Login Page
+==============================
+1. Login Form
+
+Signup Page
+==============================
+1. Signup Form
+
+Password Page
+==============================
+1. Reset Password Form
+
+Writing Form Page
+===============================
+1. Page Heading
+1. Writing Form 
+
+Writing Invoice Page
+===============================
+1. Page Heading
+2. Writing Invoice
+
+Writing List Page
+===============================
+1. Page Heading
+3. Writing List
+
+Writing Single Page
+===============================
+1. Page Heading
+4. Writing Single
+
+Writing Dashborad Page
+===============================
+1. Page Heading
+6. Account Overview (Dashbord Widget)
+
+
+
+
+BrainBox Authentication Blocks
+==============================
+1. Login Form
+2. Signup Form
+3. Reset Password Form
+
+BrainBox Writing Blocks
+==========================
+1. Writing Form 
+2. Writing Invoice
+3. Writing List
+4. Writing Single
+5. Pricing Table
+6. Account Overview (Dashbord Widget)
+
+
+
+
+
+
+BrainBox Gutenberg Blocks (Home)
+===============================
+1. Jumbotron 
+    - Attributes
+        - Primary text
+        - Secondary text
+        - Image URL
+2. Landing Form Block
+    - Attributes
+        - Endpoint URL 
+        - On Success Redirect To
+3. Selling Points
+4. Offerings Summary
+5. Acheivements Summary
+6. Testimonials
+7. Recent Posts
+8. Subscription Form
+9. Image Box
+
+BrainBox Writing Blocks
+==========================
+1. Writing Form 
+2. Writing Invoice
+3. Writing List
+4. Writing Single
+5. Pricing Table
+6. Account Overview (Dashbord Widget)
+
+BrainBox Authentication Blocks
+==============================
+1. Login Form
+2. Signup Form
+3. Reset Password Form
+
+
+1. Currencies
+    - Pricing Factor
+    - Name
+    - Code
+2. Writing Types
+    - Pricing Factor
+    - Name
+    - Code
+3. Writing Intervals
+    - Pricing Factor
+    - Name
+    - Code
+4. Academic Levels
+    - Pricing Factor
+    - Name
+    - Code
+
+Properties
+=============
+- currencies:  Currency[]
+- selectedCurrency: Currency
+- writingTypes: WritingType[]
+- selectedWritingType: WritingType
+- intervals: WritingInterval[]
+- levels: AcademicLevel[]
+
+
+
+Review Solidity files
+Trying compiling
+Dissect code flow
+Run Oyente
+Run Manticore
+Run Maian
+Manually check for the follwing errors
+ - Reentrancy
+ - Default public (parity hack)
+ - Overflows/Underflows
+ - Unchecked send
+ - Gas limits
+ - Withdrawal not sent
+ - Transaction ordering dependence
+ - Call stack limit check
+ - Variable or function ambiguity 
+ - Timestamp dependence
+ - Business login flaws

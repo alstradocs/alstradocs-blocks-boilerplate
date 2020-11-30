@@ -1,0 +1,24 @@
+{
+    "name": "alstradocs/alstradocs-blocks-boilerplate-jumbotron",
+    "title": "Jumbotron",
+	"category": "alstradocs-blocks-boilerplate-widgets",
+	"icon": "smiley",
+	"attributes": {
+		"primary": {
+			"type": "string",
+			"default": ""
+		},
+		"secondary": {
+			"type": "string",
+			"default": ""
+		},
+		"mediaId": {
+			"type": "number",
+			"default": 0
+		},
+		"mediaUrl": {
+			"type": "string",
+			"default": ""
+		}
+	}
+}

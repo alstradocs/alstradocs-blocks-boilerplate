@@ -1,0 +1,16 @@
+{
+    "name": "alstradocs/alstradocs-blocks-boilerplate-landing-form",
+    "title": "Landing Form",
+	"category": "alstradocs-blocks-boilerplate-widgets",
+	"icon": "smiley",
+	"attributes": {
+		"endpointURL": {
+			"type": "string",
+			"default": ""
+		},
+		"redirectToURL": {
+			"type": "string",
+			"default": ""
+		}
+	}
+}
