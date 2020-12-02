@@ -1,81 +1,30 @@
 <?php
 
-namespace AlstradocsBlocksBoilerplatePlugin\Blocks\LandingForm;
+namespace AlstradocsBlocksBoilerplatePlugin\Blocks\Domain\LandingForm;
 
-use AlstradocsBlocksBoilerplatePlugin\AssetLoader;
-use AlstradocsBlocksBoilerplatePlugin\Scripts;
+use AlstradocsBlocksBoilerplatePlugin\Block\Scripts;
+use AlstradocsBlocksBoilerplatePlugin\Block\AssetLoader;
+use AlstradocsBlocksBoilerplatePlugin\Blocks\Framework\BlockScript;
+use AlstradocsBlocksBoilerplatePlugin\Blocks\Domain\LandingForm\Partials;
 
 require_once __DIR__ . '/partials/landing-form.php';
 
-function setup()
-{
-    add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\loadFrontendAssets' );
-    add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\\loadEditorAssets' );
+class Register extends BlockScript {
 
-    register_block_type_from_metadata(
-        __DIR__,
-        [
-            'render_callback' => __NAMESPACE__ . '\\renderLandingForm',
-        ]
-    );
-}
+    protected $blockHandle = 'landing-form';
+    
+    protected $frontendScripts = [
+        'simple-react-validator' => 'https://cdn.jsdelivr.net/npm/simple-react-validator/dist/simple-react-validator.js',
+        'moment-js' => 'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js'
+    ];
 
-function loadEditorAssets()
-{
-    AssetLoader\enqueueAsset(
-        Scripts\manifestFilePath(),
-        'blocks/landing-form-scripts.js',
-        [
-        'handle' => 'landing-form',
-        'styles' => [],
-        'transformDevURI' => [
-            '/alstradocs-blocks-boilerplate/',
-            plugins_url('alstradocs-blocks-boilerplate/build/', dirname(__DIR__)),
-        ],
-        ]
-    );
-}
-/**
- * For some reason I am unable to enqueue the script
- * in the footer hence the need to pass a 'false' as 
- * the last option to \AlstradocsBlocksBoilerplatePlugin\AssetLoader\enqueueAsset
- */
-function loadFrontendAssets()
-{
-    \AlstradocsBlocksBoilerplatePlugin\AssetLoader\enqueueAsset(
-        Scripts\manifestFilePath(),
-        'landing-form-component.js',
-        [
-            'handle' => 'landing-form-component',
-            'styles' => [],
-            'scripts' => [
-                'wp-element'
-            ],
-            'transformDevURI' => [
-                '/alstradocs-blocks-boilerplate/',
-                plugins_url('alstradocs-blocks-boilerplate/build/', dirname(__DIR__)),
-            ],
-        ],
-        false
-    );
-    //wp_localize_script( 'landing-form-component', 'orderFormBlockInitData', get_localization_data() );
-
-    wp_enqueue_script('simple-react-validator', 
-        'https://cdn.jsdelivr.net/npm/simple-react-validator/dist/simple-react-validator.js', array(), NULL, false);
-
-    wp_enqueue_script('moment-js', 
-        'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js', array(), NULL, false);
-}
-
-function get_localization_data(): array {
-    $data = [];
-    if(array_key_exists('', $_POST)) {
-
+    /**
+     * 
+     */
+    public function render($attributes, $content): string
+    {   
+        return Partials::output($attributes, $content);
     }
-    return [];
-}
 
-function renderLandingForm($attributes): string
-{   
-    return Partials\output($attributes);
+
 }

@@ -1,46 +1,26 @@
 <?php
 
-namespace AlstradocsBlocksBoilerplatePlugin\Blocks\Jumbotron;
+namespace AlstradocsBlocksBoilerplatePlugin\Blocks\Domain\Jumbotron;
 
-use AlstradocsBlocksBoilerplatePlugin\AssetLoader;
-use AlstradocsBlocksBoilerplatePlugin\Scripts;
+use AlstradocsBlocksBoilerplatePlugin\Block\Scripts;
+use AlstradocsBlocksBoilerplatePlugin\Block\AssetLoader;
+use AlstradocsBlocksBoilerplatePlugin\Blocks\Framework\BlockScript;
+use AlstradocsBlocksBoilerplatePlugin\Blocks\Domain\Jumbotron\Partials;
 
 require_once __DIR__ . '/partials/jumbotron.php';
 
-/**
- * 
- */
-function setup()
-{
-    add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\\loadEditorAssets' );
+class Register extends BlockScript {
 
-    register_block_type_from_metadata(
-        __DIR__,
-        [
-            'render_callback' => __NAMESPACE__ . '\\renderJumbotron',        
-        ]
-    );
+    protected $blockHandle = 'jumbotron';
+    
+    /**
+     * 
+     */
+    public function render($attributes, $content): string
+    {   
+        return Partials::output($attributes, $content);
+    }
+
+
 }
 
-/**
- * 
- */
-function loadEditorAssets()
-{
-    AssetLoader\enqueueAsset(
-        Scripts\manifestFilePath(),
-        'blocks/jumbotron-scripts.js',
-        [
-        'handle' => 'jumbotron-editor-scripts-js',
-        'styles' => [],
-        ]
-    );
-}
-
-/**
- * 
- */
-function renderJumbotron($attributes, $content): string
-{   
-    return Partials\output($attributes, $content);
-}

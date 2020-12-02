@@ -1,5 +1,5 @@
 {
-    "name": "alstradocs-block-boilerplate",
+    "name": "@alstradocs/blocks-boilerplate",
     "version": "1.0.0",
     "description": "",
     "main": "src/idex.tsx",

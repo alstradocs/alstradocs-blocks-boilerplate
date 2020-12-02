@@ -9,7 +9,6 @@
  * License: GPL2+
  * License URI: https://www.gnu.org/licenses/gpl-2.0.txt
  *
- * @package CGB
  */
 namespace AlstradocsBlocksBoilerplatePlugin;
 
@@ -20,14 +19,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Auto-load PHP Editor Blocks.
 require_once __DIR__ . '/inc/utils/block-utils.php';
+require_once __DIR__ . '/inc/framework/block-script.php';
 require_once __DIR__ . '/inc/blocks.php';
 require_once __DIR__ . '/inc/asset-loader.php';
 require_once __DIR__ . '/inc/scripts.php';
 // Old static blocks format
 
-Blocks\setup();
+\AlstradocsBlocksBoilerplatePlugin\Block\Blocks::setup();
 
-Scripts\setup();
+\AlstradocsBlocksBoilerplatePlugin\Block\Scripts::setup();
 
 /**
  * Block Initializer.
