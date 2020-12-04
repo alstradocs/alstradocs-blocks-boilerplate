@@ -1,9 +1,9 @@
 <?php
 
-namespace AlstradocsBlocksBoilerplatePlugin\Blocks\Framework;
+namespace AlstradocsBlocks\Blocks\Framework;
 
-use AlstradocsBlocksBoilerplatePlugin\Block\Scripts;
-use AlstradocsBlocksBoilerplatePlugin\Block\AssetLoader;
+use AlstradocsBlocks\Block\Scripts;
+use AlstradocsBlocks\Block\AssetLoader;
 
 /**
  * 
@@ -21,7 +21,7 @@ abstract class BlockScript {
      */
     public function setup() {
         add_action('admin_enqueue_scripts', [$this, 'loadEditorAssets']);
-        add_action('admin_enqueue_scripts', [$this, 'loadFrontendAssets']);
+        add_action('enqueue_scripts', [$this, 'loadFrontendAssets']);
         register_block_type_from_metadata(__DIR__, ['render_callback' => [$this, 'render']]);
     }
 
@@ -49,7 +49,7 @@ abstract class BlockScript {
     /**
      * For some reason I am unable to enqueue the script
      * in the footer hence the need to pass a 'false' as 
-     * the last option to \AlstradocsBlocksBoilerplatePlugin\AssetLoader\enqueueAsset
+     * the last option to \AlstradocsBlocks\AssetLoader\enqueueAsset
      */
     public function loadFrontendAssets()
     {
@@ -106,7 +106,7 @@ abstract class BlockScript {
      */
     protected function getFrontendScriptsDependencies()
     {
-        return [];
+        return ['wp-element'];
     }
 
     /**
