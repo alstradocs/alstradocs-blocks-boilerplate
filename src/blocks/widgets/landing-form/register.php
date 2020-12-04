@@ -21,6 +21,14 @@ class Register extends BlockScript {
     /**
      * 
      */
+    public function setup() {
+        parent::setup();
+        register_block_type_from_metadata(__DIR__, ['render_callback' => [$this, 'render']]);
+    }
+
+    /**
+     * 
+     */
     public function render($attributes, $content): string
     {   
         return Partials::output($attributes, $content);

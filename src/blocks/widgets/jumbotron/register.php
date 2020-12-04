@@ -12,6 +12,14 @@ require_once __DIR__ . '/partials/jumbotron.php';
 class Register extends BlockScript {
 
     protected $blockHandle = 'jumbotron';
+
+    /**
+     * 
+     */
+    public function setup() {
+        parent::setup();
+        register_block_type_from_metadata(__DIR__, ['render_callback' => [$this, 'render']]);
+    }
     
     /**
      * 
