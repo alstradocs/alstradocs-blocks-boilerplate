@@ -76,7 +76,7 @@ class Blocks {
     public static function getNamespaceFromBlockHandle(string $blockHandle, ?string $space = null) : string
     {
         // Add a prefix namespace to the generic namespace, if passed a sub-directory space.
-        $prefix = 'AlstradocsBlocksBoilerplatePlugin\\Blocks\\Domain';
+        $prefix = 'AlstradocsBlocksBoilerplatePlugin\\Block\\Domain';
         if ($space) {
             $prefix .= '\\' . ucwords($space);
         }

@@ -3,7 +3,7 @@ to: <%= name %>/partials/<%= name %>.php
 ---
 <?php
 
-namespace AlstradocsBlocks\Blocks\Domain\<%= h.capitalize(name) %>;
+namespace AlstradocsBlocksBoilerplatePlugin\Block\Domain\<%= h.capitalize(name) %>;
 
 
 class Partials {

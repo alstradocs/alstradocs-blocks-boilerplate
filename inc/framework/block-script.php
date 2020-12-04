@@ -1,9 +1,9 @@
 <?php
 
-namespace AlstradocsBlocks\Blocks\Framework;
+namespace AlstradocsBlocksBoilerplatePlugin\Block\Framework;
 
-use AlstradocsBlocks\Block\Scripts;
-use AlstradocsBlocks\Block\AssetLoader;
+use AlstradocsBlocksBoilerplatePlugin\Block\Scripts;
+use AlstradocsBlocksBoilerplatePlugin\Block\AssetLoader;
 
 /**
  * 
