@@ -1,11 +1,11 @@
 <?php
 
-namespace AlstradocsBlocksBoilerplatePlugin\Blocks\Domain\Jumbotron;
+namespace AlstradocsBlocksBoilerplatePlugin\Block\Domain\Jumbotron;
 
 use AlstradocsBlocksBoilerplatePlugin\Block\Scripts;
 use AlstradocsBlocksBoilerplatePlugin\Block\AssetLoader;
-use AlstradocsBlocksBoilerplatePlugin\Blocks\Framework\BlockScript;
-use AlstradocsBlocksBoilerplatePlugin\Blocks\Domain\Jumbotron\Partials;
+use AlstradocsBlocksBoilerplatePlugin\Block\Framework\BlockScript;
+use AlstradocsBlocksBoilerplatePlugin\Block\Domain\Jumbotron\Partials;
 
 require_once __DIR__ . '/partials/jumbotron.php';
 

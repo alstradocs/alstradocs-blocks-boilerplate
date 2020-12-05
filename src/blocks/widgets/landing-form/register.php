@@ -1,11 +1,11 @@
 <?php
 
-namespace AlstradocsBlocksBoilerplatePlugin\Blocks\Domain\LandingForm;
+namespace AlstradocsBlocksBoilerplatePlugin\Block\Domain\LandingForm;
 
 use AlstradocsBlocksBoilerplatePlugin\Block\Scripts;
 use AlstradocsBlocksBoilerplatePlugin\Block\AssetLoader;
-use AlstradocsBlocksBoilerplatePlugin\Blocks\Framework\BlockScript;
-use AlstradocsBlocksBoilerplatePlugin\Blocks\Domain\LandingForm\Partials;
+use AlstradocsBlocksBoilerplatePlugin\Block\Framework\BlockScript;
+use AlstradocsBlocksBoilerplatePlugin\Block\Domain\LandingForm\Partials;
 
 require_once __DIR__ . '/partials/landing-form.php';
 

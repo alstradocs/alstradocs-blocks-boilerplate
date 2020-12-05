@@ -1,6 +1,6 @@
 <?php
 
-namespace AlstradocsBlocksBoilerplatePlugin\Blocks\Domain\Jumbotron;
+namespace AlstradocsBlocksBoilerplatePlugin\Block\Domain\Jumbotron;
 
 
 class Partials {

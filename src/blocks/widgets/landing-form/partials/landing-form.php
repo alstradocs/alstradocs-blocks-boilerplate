@@ -1,6 +1,6 @@
 <?php
 
-namespace AlstradocsBlocksBoilerplatePlugin\Blocks\Domain\LandingForm;
+namespace AlstradocsBlocksBoilerplatePlugin\Block\Domain\LandingForm;
 
 
 class Partials {
