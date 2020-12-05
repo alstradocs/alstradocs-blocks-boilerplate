@@ -110,7 +110,7 @@ const Edit: React.FC<any> = ({ media, attributes, setAttributes }: JumbotronProp
 					</div>
 				</PanelBody>
 			</InspectorControls>
-			<div className="brainbox-editor-container" style={blockStyle}>
+			<div className="alstradocs-editor-block-container" style={blockStyle}>
 				<div><h1>{ attributes.primary }</h1></div>
 				<div><h4>{ attributes.secondary }</h4></div>
 				<InnerBlocks allowedBlocks={ALLOWED_BLOCKS} />

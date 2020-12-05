@@ -38,7 +38,7 @@ const Edit: React.FC<LandingFormProps> = ({ attributes, setAttributes }: Landing
 					</PanelRow>
 				</PanelBody>
 			</InspectorControls>
-			<div className="alstradocs-editor-container">
+			<div className="alstradocs-editor-block-container">
 				<div><h1>{ attributes.endpointURL }</h1></div>
 				<div><h4>{ attributes.redirectToURL }</h4></div>
 			</div>
